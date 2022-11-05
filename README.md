@@ -54,10 +54,81 @@ Results:
 Conclusion: 
     To conclude, overall i think my decision to do IMDB movie reviews was a good choice. I learned that my hypothesis, that the most liked movie would be in the genre of romantic comedy, was completely wrong. In fact, Top Gun:Maverick (adventure/action) was by far the most liked movie out of all of them. 
 
-    What went well: I think i choose the appropriated data types and was able to consistently test my functions (using the print function) to see whether my functions were correct or not. Morevoer, I did well in choosing word frequency and sentiment analysis because they were two complementary techniques in testing my hypothesis. 
+    What went well: I think i chose the appropriated data types and was able to consistently test my functions (using the print function) to see whether my functions were correct or not. Morevoer, I did well in choosing word frequency and sentiment analysis because they were two complementary techniques in testing my hypothesis. 
 
     Challenges: Pulling movie reviews from the IMDB database was harder than I thought they would be. 
 
     Before I started, I wish I had taught to take out the most common words and stopping words out of the dictionary. That way, my most frequent word list for every top 20 movie review would have beeing cleaner and easier to analyze.  
 
         
+
+
+
+ output after extra time _________________________________________________________________________________________________________________________
+
+ --> I used the extension given by the professor to clean out the stopwords in each movie list_of_all_reviews. The results were a much cleaner version of the most frequent words used in each review- pointing, more easily, to the liking or disliking of each film. 
+
+____________________________________________________________  ________________________  ___________________________________________________________
+
+"Top Gun: Maverick" 
+        Top 80 words: 
+        | After cleaning for stopwords: |
+        ['maverick', 'movie', 'first', 'top', '-', 'film', 'one', 'cruise', 'tom', 'original', 'action', 'also', 'see', 'new', 'time', 'like', 'great', 'get', 'gun', 'never', 'big', 'even', 'story', 'much', 'gun:', 'best', 'seen', 'sequences', 'sequel', 'especially', 'years', 'film.', 'feel', 'still', 'impossible', 'music', 'could', 'age', 'it.', 'actually', 'us', 'well', 'pilots', 'good', 'kilmer', 'though', 'perfect', 'real', 'many', "can't", 'pilot', 'need', "he's", 'movie,', 'make', 'old', 'would', 'jennifer', 'teller', 'love', 'coming', 'rooster', 'biggest', 'screen', 'original,', 'loved', 'back', 'whole', 'mission:', 'practical', 'worth']
+
+        | Before cleaning for stop words: |
+        ['te', 'and', 'to', 'a', 'is', 'of', 'in', 'it', 'i', 'that', 'was', 'this', 'as', 'with', 'for', 'you', 'are', 'but', 'maverick', 'movie', 'on', 'his', 'first', 'top', '-', 'film', 'he', 'one', 'we', 'from', 'cruise', 'by', 'tom', 'be', "it's", 'original', 'so', 'action', 'also', 'not', 'has', 'an', 'all', 'had', 'my', 'there', 'see', 'have', 'new']
+
+        Sentiment Analysis: 
+        [0.9944, 0.9211, 0.9829, 0.9922, 0.5983, -0.7227, 0.9708, 0.9982, 0.91, 0.9976, 0.9952, 0.997, 0.9569, 0.9741, 0.9935, 0.9937, 0.9906, 0.9577, 0.9602, 0.9232]
+
+        Reasoning: Clearly, the crowd did not only liked but also LOVED this movie in its entirity. This is backed by the appearance of extremely positive words such as 'first', 'top', 'like', 'great', 'big','perfect' and 'loved' (are 3rd, 4th, 16th, 17th, 22th, 28th, and 44th, in order of highest frequency.) 
+
+        The sentiment analysis is in accordance with the positivity words. In fact, the 15 out of the top 20 reviews had a score >= .95, which shows extreme positivity - since the range is from 0 to 1 & the closer to +1 being the extreme positive and the close to -1 being the most negative.  
+
+"Ticket to Paradise"
+        
+         After Cleaning for stopwords: |
+
+        Top 50 words, in terms of most frequent:
+
+        ['movie', 'also', '-', 'like', 'clooney', 'even', 'roberts', 'film', 'really', 'julia', 'george', 'two', 'good', 'character', 'one', 'could', 'maybe', 'romantic', 'would', 'actors', "clooney's", 'bali', 'big', 'daughter', 'felt', 'see', "roberts'", 'much', 'together', 'make', 'get', 'got', 'funny', 'young', 'love', 'script', 'comedy', 'made', 'well', 'great', 'must', 'say', 'time', 'better']
+
+        | Before cleaning for stopwords: |
+        Top (around) 100 words:
+        ['the', 'and', 'a', 'to', 'of', 'i', 'is', 'in', 'it', 'that', 'was', 'this', 'with', 'not', 'but', 'on', 'movie', 'for', 'have', 'they', 'as', 'so', 'are', 'also', 'you', '-', 'about', 'like', 'or', 'when', 'their', 'even', 'all', 'clooney', 'by', 'how', 'he', 'her', 'if', 'be', 'film', 'julia', 'more', 'really', 'just', 'each', 'were', 'roberts', 'george', 'good','other', 'at', 'she', 'two', 'what', 'been', 'there', 'them', 'actors', 'we', 'only', 'one', 'which', 'his', "it's", 'could', 'here', 'maybe', 'romantic', 'see', 'very', 'has', 'up', 'do', 'much', 'will', 'make', 'had', 'then', 'daughter', 'would', "clooney's", 'character', 'together', 
+        'great', 'no', 'made', 'love', 'me', 'an', 'who', 'get', 'why', 'did', 'from', 'funny']
+
+        Sentiment Analysis:
+        [0.9222, 0.9971, 0.9912, 0.9571, 0.9977, 0.9932, 0.9142, 0.9332, 0.9986, 0.9395, 0.9848, 0.7003, 0.9712, 0.952, 0.9282, 0.972, 0.8491, 0.9959, -0.9132, 0.8863]
+
+        Reasoning: 
+        The overall mood of 'Ticket to Paradise''s reviews is positive, indicated by words such as 'good', 'felt', 'well', and 'better' appear as the appear in the top 50 most frequent words (in the order described from highest to lowest frequency, respectively). This positive mood combined with the actors name appeareance in the top 10 most frequent words ('clooney'(5);'roberts'(7);'julia'(9); and 'george'(10)) show not only that viewers noticed their perfomance but also liked. Lastly, the movie achieved its goal of promoting the mood of love and fun, in this romantic comedy- noted by the frequent appearance of words such as 'romantic'(24), 'love'(44), 'funny'(42) and 'comedy'(46). 
+
+        The sentimental analysis of this film is good- showing alignemnt with the most frequent words. Out of the top 20 reviews, 11 had a score of >= 0.95. Which shows a moderate amount of extreme positivity. 
+
+
+ "Death in the Nile"
+           After Cleaning for stopwords: |
+
+        Top 50 words, in terms of most frequent:
+
+        ['film', 'characters', 'branagh', 'like', 'movie', 'christie', 'kenneth', 'even', 'one', 'story', 'better', 'many', 'poirot', 'much', 'cgi', 'great', 'agatha', 'watch', 'orient', 'everything', 'version', 'felt', 'nile', '1978', 'first', '-', 'actors', 'bad', 'mystery', 'character', 'british', 'egypt', 'cast', 'murder', 'performances', 'cinematography', 'make', 'gas', 'see', 'acting', 'really', 'found', 'new', 'script', 'death', 'tv', 'say', 'hour', 'best', 'changed,', 'shot', 'hercule', 'nile.', 'adaptation,', 'effects', 'green', 'modern', 'style', 'fake']
+
+        | Before cleaning for stopwords: |
+
+        Top (around) 100 words:
+        [the', 'and', 'a', 'of', 'is', 'in', 'to', 'this', 'with', 'it', 'but', 'on', 'i', 'was', 'that', 'are', 'an', 'just', 'film', 'not', 'for', 'or', 'from', 'characters', 'as', 'movie', 'be', 'by', 'like', 'at', 'no', 'has', 'branagh', 'even', 'all', "it's", 'her', 'she', 'out', 'christie', 'very', 'when', 'have', 'there', 'you', 'they', 'so', 'were', 'one', 'story', 'great', 'some', 'better', 'kenneth', 'about', 'more', 'many', 'poirot', 'much', 'actors', 'most', 'cgi', 'than', 'everything', 'nile', 'only', 'what', 'bad', 'script', 'boring', 'he', 'watch', 'make', 'version', 'felt', 'over', 'because', 'their', '1978', "don't", 'why', 'first', 'too', 'really', 'mystery', 'character', 'agatha', 'british', 'will', 'egypt', 'him', 'cast', 'murder', 'orient', 'performances', 'cinematography', 'effects']
+
+        Sentiment Analysis:
+        [0.8566, -0.8863, 0.2664, 0.1779, 0.7242, 0.8623, 0.9915, -0.6352, 0.7822, -0.5538, 0.9476, -0.66, 0.3818, -0.9328, -0.6874, 0.9413, 0.6357, 0.8577, -0.985, -0.8433]
+
+        In this film, particularly, the words that seemed most interesting to me were that words of positivity ['great',' 'much'] were almost just as frequent as negative words ['bad', 'fake']. This is particularly shocking because a drama/suspense film that tries to investigate a murder it should be nothing but bad or fake. In fact, while the romantic commedy had the wanted reaction (funny and romantic), this drama/suspense film did not. At least in first sight. 
+
+         The sentimental analysis is in accordance with the most frequent words, in particular, the negative tonality words. Differently from the first two films, these film had the most amount of negative compound scores, approaching about 8 out of 20 being negative and 1 neutral. 
+        
+Conclusion: 
+    To conclude, overall i think my decision to do IMDB movie reviews was a good choice.
+    
+    I learned that my hypothesis, that the most liked movie would be in the genre of romantic comedy, was completely wrong. In fact, Top Gun: Maverick (adventure/action) was by far the most liked movie out of all of them. Moreover, I was surprise to see the negativity around "Death in the Nile"- under no circumstance I would have predicted that customers not only did not like it but also thought it seemed fake. 
+
+    And also, I learned that actors are hidden extremely accountable for their perfomance in movies- if they do a great job, there will bit the actor's name in every sentence describing the movie. However, if the do a bad acting perfomance, the customers will not hesitate to hold them accountable and express their opinion- however harsh it may be. 

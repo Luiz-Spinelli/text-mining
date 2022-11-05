@@ -3,9 +3,13 @@
 """
 I will begin by installing the required packages.
 """
+from tracemalloc import stop
 from imdb import Cinemagoer
 import imdb
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 
 """
@@ -86,12 +90,21 @@ with open('data/M3reviews.txt', 'w') as f:
 
 
 """
+Now, I attempt to take out the common stop words out of each movie's list of 20 reviews. 
+And assign the new_words list to the next dictionary function which counts the most frequency of the words in the cleaned of stop words list. 
+"""
+
+sw_nltk = stopwords.words('english')
+# print(sw_nltk)
+
+
+"""
 In order to count the frequency of each word I will create a function that converts the list of words of reviews into a dictionary
 
 """
 def d(all_reviews):
     """
-    This function returns words and frequencies in a dictonary, opten each movie list of all reviews txt file. 
+    This function returns words and frequencies in a dictonary, from each movie list of all reviews txt file - after removing the list of stopwords from each.  
 
     """
     result = {}
@@ -100,8 +113,11 @@ def d(all_reviews):
 
     for line in fp:
         for word in line.split():
-            word = word.lower()
-            result[word] = result.get(word, 0) + 1
+            word = word.lower() 
+            if word not in sw_nltk:
+                result[word] = result.get(word, 0) + 1
+            else:
+                continue
 
     return result
 
@@ -115,7 +131,7 @@ m3_dictionary = d('data/M3reviews.txt')
 
 """
 After converting each movie's list of all reviews text file into a dictionary, with the key = word and value= frequency of the word, I decided to sort that dictionary. 
-To sort the dictonary of words from high to low word frequency, I decided to use the sorted function and assign the result to a new variable (sorted_M?_dict)
+To sort the dictonary of words from high to low word frequency, I decided to use the sorted function and assign the result to a new variable (sorted_M#_dict)
 """
 
 sorted_M1_dict = sorted(m1_dictionary, key = m1_dictionary.get , reverse = True)
@@ -151,9 +167,9 @@ def f(list_reviews):
 
     return scores
 
-print(f(m1_list_of_all_reviews))
-print(f(m2_list_of_all_reviews))
-print(f(m3_list_of_all_reviews))
+# print(f(m1_list_of_all_reviews))
+# print(f(m2_list_of_all_reviews))
+# print(f(m3_list_of_all_reviews))
 
 
 def main():
